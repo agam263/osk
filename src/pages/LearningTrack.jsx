@@ -66,13 +66,11 @@ const LearningTrack = () => {
   };
 
   const startTrack = (trackId) => {
-    setUserProgress((prev) => ({
-      ...prev,
-      currentTrack: trackId,
-      currentModule:
-        learningTracks.find((t) => t.id === trackId)?.modules[0]?.id || null,
-    }));
-    setSelectedTrack(trackId);
+    const track = learningTracks.find((t) => t.id === trackId);
+    const firstModuleId = track?.modules[0]?.id;
+    if (firstModuleId) {
+      navigate(`/learning/${trackId}/${firstModuleId}`);
+    }
   };
 
   const navigateToModule = (trackId, moduleId) => {
@@ -252,13 +250,12 @@ const LearningTrack = () => {
                   {/* Action Button */}
                   <button
                     onClick={() => startTrack(track.id)}
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      userProgress.currentTrack === track.id
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${userProgress.currentTrack === track.id
                         ? "bg-blue-600 text-white hover:bg-blue-700"
                         : `bg-gradient-to-r ${getTrackColor(
-                            track.color
-                          )} text-white hover:shadow-lg`
-                    }`}
+                          track.color
+                        )} text-white hover:shadow-lg`
+                      }`}
                   >
                     {userProgress.currentTrack === track.id
                       ? "Continue Learning"
@@ -306,24 +303,22 @@ const LearningTrack = () => {
                       !isModuleLocked(selectedTrack, module.id) &&
                       navigateToModule(selectedTrack, module.id)
                     }
-                    className={`p-6 rounded-xl border-2 transition-all duration-300 ${
-                      isModuleLocked(selectedTrack, module.id)
+                    className={`p-6 rounded-xl border-2 transition-all duration-300 ${isModuleLocked(selectedTrack, module.id)
                         ? "border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 opacity-60 cursor-not-allowed"
                         : isModuleCompleted(module.id)
-                        ? "border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20 cursor-pointer hover:shadow-lg"
-                        : "border-blue-200 dark:border-blue-700 bg-white dark:bg-gray-800 hover:shadow-lg cursor-pointer"
-                    }`}
+                          ? "border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20 cursor-pointer hover:shadow-lg"
+                          : "border-blue-200 dark:border-blue-700 bg-white dark:bg-gray-800 hover:shadow-lg cursor-pointer"
+                      }`}
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center">
                         <div
-                          className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3 ${
-                            isModuleCompleted(module.id)
+                          className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3 ${isModuleCompleted(module.id)
                               ? "bg-green-500 text-white"
                               : isModuleLocked(selectedTrack, module.id)
-                              ? "bg-gray-300 text-gray-600"
-                              : "bg-blue-500 text-white"
-                          }`}
+                                ? "bg-gray-300 text-gray-600"
+                                : "bg-blue-500 text-white"
+                            }`}
                         >
                           {isModuleCompleted(module.id) ? "✓" : index + 1}
                         </div>
@@ -400,11 +395,10 @@ const LearningTrack = () => {
                           onClick={() =>
                             navigateToModule(selectedTrack, module.id)
                           }
-                          className={`w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 ${
-                            isModuleCompleted(module.id)
+                          className={`w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 ${isModuleCompleted(module.id)
                               ? "bg-green-100 text-green-800 border border-green-300"
                               : "bg-blue-600 text-white hover:bg-blue-700"
-                          }`}
+                            }`}
                         >
                           {isModuleCompleted(module.id) ? (
                             <>
