@@ -20,21 +20,21 @@
             "title": "What is Git?",
             "type": "theory",
             "duration": "15 min",
-            "content": "Understanding version control and why it's essential for open source"
+            "content": "Git is a distributed version control system that tracks changes in your code over time. Think of it as a time machine for your projects — you can save snapshots (called 'commits') of your work and travel back to any previous state whenever needed.\n\nWhy is Git essential for open source?\n• Collaboration: Multiple developers can work on the same project without overwriting each other's changes.\n• History: Every change is recorded with who made it and why, creating a complete project timeline.\n• Branching: You can experiment with new features in isolation without affecting the main codebase.\n• Backup: Your code is stored both locally and on remote servers like GitHub, providing redundancy.\n\nKey concepts to understand:\n• Repository (repo): A folder containing your project and its entire history.\n• Commit: A snapshot of your changes with a message describing what you did.\n• Branch: An independent line of development, like a parallel universe for your code.\n• Remote: A version of your repository hosted online (e.g., on GitHub)."
           },
           {
             "id": "git-basics",
             "title": "Git Basics",
             "type": "hands-on",
             "duration": "30 min",
-            "content": "Learn essential Git commands: clone, add, commit, push"
+            "content": "Let's learn the essential Git commands you'll use every day as an open source contributor!\n\n1. Setting Up Git:\n   git config --global user.name 'Your Name'\n   git config --global user.email 'your.email@example.com'\n\n2. Cloning a Repository:\n   git clone https://github.com/username/repository.git\n   This downloads a complete copy of a project to your computer.\n\n3. The Basic Workflow:\n   • git status — Check what files have changed\n   • git add filename — Stage specific files for commit\n   • git add . — Stage all changed files\n   • git commit -m 'Your message' — Save your changes with a description\n   • git push — Upload your commits to GitHub\n\n4. Staying Updated:\n   • git pull — Download and merge changes from GitHub\n   • git fetch — Download changes without merging (safer)\n\nPro Tips:\n• Write clear commit messages that explain WHY you made a change, not just what changed.\n• Commit frequently with small, focused changes rather than one massive commit.\n• Always pull before you start working to avoid conflicts."
           },
           {
             "id": "github-workflow",
             "title": "GitHub Workflow",
             "type": "hands-on",
             "duration": "45 min",
-            "content": "Understanding repositories, branches, and pull requests"
+            "content": "GitHub adds powerful collaboration features on top of Git. Here's the workflow every contributor needs to master:\n\n1. Fork: Create your own copy of a project on GitHub.\n   • Click the 'Fork' button on any repository page\n   • This creates a copy under your GitHub account\n\n2. Clone: Download your fork to your computer.\n   git clone https://github.com/YOUR-USERNAME/project.git\n\n3. Create a Branch: Always work on a new branch, never on 'main'.\n   git checkout -b feature/my-new-feature\n\n4. Make Changes: Edit files, test your changes, and commit.\n   git add .\n   git commit -m 'Add new feature'\n\n5. Push: Upload your branch to GitHub.\n   git push origin feature/my-new-feature\n\n6. Pull Request (PR): Propose your changes to the original project.\n   • Go to your fork on GitHub\n   • Click 'Compare & pull request'\n   • Describe your changes and submit\n\nPR Best Practices:\n• Link to any related issues using #issue-number\n• Include screenshots for visual changes\n• Be responsive to feedback and make requested changes promptly"
           }
         ],
         "challenges": [
@@ -57,21 +57,21 @@
             "title": "What is Open Source?",
             "type": "theory",
             "duration": "20 min",
-            "content": "Understanding the philosophy and benefits of open source"
+            "content": "Open source software is code that anyone can view, modify, and distribute freely. It's built on the philosophy that sharing knowledge creates better software for everyone.\n\nThe Open Source Philosophy:\n• Transparency: The source code is publicly available for anyone to inspect and learn from.\n• Collaboration: Developers worldwide contribute improvements, bug fixes, and new features.\n• Meritocracy: Good ideas win regardless of who proposes them — your contribution matters!\n• Community: Projects are maintained by passionate communities, not just corporations.\n\nBenefits of Open Source:\n• Learn by Reading: Study how professionals write code in real-world projects.\n• Build Your Portfolio: Your contributions are public proof of your skills.\n• Make Real Impact: Your code can be used by thousands or even millions of people.\n• Networking: Connect with developers, mentors, and potential employers globally.\n\nFamous Open Source Projects:\n• Linux — Powers most servers, Android phones, and supercomputers\n• React — Facebook's UI library used by millions of websites\n• VS Code — Microsoft's popular code editor\n• Python — A programming language with a massive open source ecosystem\n\nJoining Open Source Kashmir (OSK) connects you to this global movement while building a local community right here!"
           },
           {
             "id": "contribution-types",
             "title": "Types of Contributions",
             "type": "theory",
             "duration": "15 min",
-            "content": "Code, documentation, design, and community contributions"
+            "content": "You don't need to be an expert coder to contribute to open source! There are many ways to make meaningful contributions:\n\n1. Code Contributions:\n   • Bug fixes — Find and fix errors in the code\n   • New features — Add functionality users have requested\n   • Performance improvements — Make the software faster or more efficient\n   • Code refactoring — Clean up and improve existing code\n\n2. Documentation:\n   • Write or improve README files\n   • Create tutorials and guides\n   • Translate documentation to other languages\n   • Add code comments for clarity\n\n3. Design:\n   • Create logos, icons, and graphics\n   • Improve user interface designs\n   • Design website layouts\n   • Create promotional materials\n\n4. Community Support:\n   • Answer questions on forums or Discord\n   • Triage issues (help categorize bug reports)\n   • Review other people's pull requests\n   • Welcome and guide new contributors\n\n5. Testing:\n   • Report bugs you discover\n   • Test new features before release\n   • Write automated tests\n\nStart with what you're comfortable with! Many successful open source contributors began with documentation or community support before writing code."
           },
           {
             "id": "finding-projects",
             "title": "Finding Projects to Contribute",
             "type": "hands-on",
             "duration": "30 min",
-            "content": "How to discover projects that match your interests and skills"
+            "content": "Finding the right project is crucial for a great first contribution experience. Here's how to discover projects that match your interests and skills:\n\nWhere to Find Projects:\n• GitHub Explore: github.com/explore — Curated trending repositories\n• Good First Issues: goodfirstissues.com — Beginner-friendly issues across projects\n• First Contributions: firstcontributions.github.io — Guided first PR experience\n• Open Source Kashmir: github.com/Open-Source-Kashmir — Our community projects!\n• Up For Grabs: up-for-grabs.net — Projects specifically seeking contributors\n\nEvaluating a Project (Green Flags):\n✓ Active recent commits (within the last month)\n✓ Responsive maintainers who reply to issues\n✓ Clear contribution guidelines (CONTRIBUTING.md)\n✓ Welcoming community with a Code of Conduct\n✓ Issues labeled 'good first issue' or 'beginner-friendly'\n✓ Good documentation explaining how to set up the project\n\nRed Flags to Avoid:\n✗ No activity for months\n✗ Ignored or closed issues without explanation\n✗ No clear instructions for contributing\n✗ Toxic or unwelcoming community interactions\n\nPro Tips:\n• Start with projects you actually use — you'll understand the problem better.\n• Look for projects in technologies you want to learn.\n• Check if the project size matches your experience — smaller projects are often easier for beginners.\n• Join the project's community (Discord, Slack) before contributing to understand the culture."
           }
         ],
         "challenges": [
@@ -94,21 +94,21 @@
             "title": "Finding Good First Issues",
             "type": "hands-on",
             "duration": "25 min",
-            "content": "How to identify beginner-friendly issues and understand project requirements"
+            "content": "Good first issues are beginner-friendly tasks specifically marked by maintainers for newcomers. Here's how to find and tackle them:\n\nHow to Find Good First Issues:\n• GitHub Labels: Search for labels like 'good first issue', 'beginner', 'help wanted', 'easy'\n• GitHub Search: Go to github.com and search: label:\"good first issue\" language:javascript (replace with your language)\n• OSK Projects: Check github.com/Open-Source-Kashmir for our tagged issues!\n\nUnderstanding the Issue:\n1. Read the entire issue description carefully.\n2. Check the comments for additional context or solutions already discussed.\n3. Look at related issues or pull requests.\n4. Understand what files might need changes.\n\nBefore You Start:\n• Comment on the issue saying you'd like to work on it.\n• Ask questions if anything is unclear — maintainers appreciate this!\n• Check if someone else is already working on it.\n• Read the CONTRIBUTING.md file for project-specific guidelines.\n\nExample Comment:\n'Hi! I'd like to work on this issue. I'm new to open source and this would be my first contribution. I've read the contributing guidelines and understand I need to [specific task]. Is this issue still available?'\n\nPro Tips:\n• Start with documentation issues — they help you understand the project.\n• Avoid issues that have been open for years without progress.\n• Look for issues with clear, specific requirements.\n• Don't grab more than one issue at a time as a beginner."
           },
           {
             "id": "fork-and-clone",
             "title": "Fork and Clone",
             "type": "hands-on",
             "duration": "20 min",
-            "content": "Learn to fork repositories and set up your development environment"
+            "content": "Before you can contribute to a project, you need your own copy to work on. Here's the step-by-step process:\n\nStep 1: Fork the Repository\n• Go to the project on GitHub (e.g., github.com/Open-Source-Kashmir/osk)\n• Click the 'Fork' button in the top-right corner\n• GitHub creates a copy under your account (github.com/YOUR-USERNAME/osk)\n\nStep 2: Clone Your Fork Locally\n• Open your terminal\n• Run: git clone https://github.com/YOUR-USERNAME/repository-name.git\n• Navigate into the folder: cd repository-name\n\nStep 3: Add Upstream Remote\nThis connects your local copy to the original project for updates:\n• git remote add upstream https://github.com/ORIGINAL-OWNER/repository-name.git\n• Verify with: git remote -v\n\nStep 4: Set Up the Development Environment\n• Read the README.md for setup instructions\n• Install dependencies (npm install, pip install -r requirements.txt, etc.)\n• Run the project locally to make sure it works\n\nKeeping Your Fork Updated:\nBefore starting work, always sync with the original:\n• git fetch upstream\n• git checkout main\n• git merge upstream/main\n• git push origin main\n\nCommon Issues:\n• 'Permission denied': Make sure you're cloning YOUR fork, not the original\n• 'Dependencies not installed': Read the README carefully for setup steps\n• 'Project won't run': Check if you need specific environment variables or configurations"
           },
           {
             "id": "creating-pr",
             "title": "Creating Pull Requests",
             "type": "hands-on",
             "duration": "40 min",
-            "content": "The complete process from issue to merged pull request"
+            "content": "A Pull Request (PR) is how you submit your changes for review. Here's the complete workflow:\n\nStep 1: Create a Feature Branch\nNever work directly on 'main'!\n• git checkout main\n• git pull upstream main (get latest changes)\n• git checkout -b fix/issue-description\n\nBranch naming conventions:\n• fix/bug-description — For bug fixes\n• feature/feature-name — For new features\n• docs/what-you're-documenting — For documentation\n\nStep 2: Make Your Changes\n• Edit the necessary files\n• Test your changes locally\n• Keep changes focused — one issue per PR\n\nStep 3: Commit Your Changes\n• git add .\n• git commit -m 'Fix: descriptive message about what you changed'\n\nGood commit messages:\n• Start with a verb: 'Fix', 'Add', 'Update', 'Remove'\n• Be specific: 'Fix navigation bug on mobile' not 'Fixed stuff'\n\nStep 4: Push to GitHub\n• git push origin fix/issue-description\n\nStep 5: Create the Pull Request\n• Go to your fork on GitHub\n• Click 'Compare & pull request'\n• Fill out the PR template:\n   - Title: Clear, concise description\n   - Description: Explain what you changed and why\n   - Link the issue: 'Fixes #123'\n   - Add screenshots for visual changes\n\nAfter Submitting:\n• Be patient — maintainers are often volunteers\n• Respond to feedback politely and make requested changes\n• Don't get discouraged if changes are requested — it's part of learning!"
           }
         ],
         "challenges": [
@@ -131,21 +131,21 @@
             "title": "Effective Communication",
             "type": "theory",
             "duration": "20 min",
-            "content": "How to communicate professionally in open source communities"
+            "content": "Open source communities span the globe, with contributors from different cultures, time zones, and communication styles. Here's how to communicate professionally and effectively:\n\nGolden Rules of Open Source Communication:\n1. Be Respectful: Remember there's a human on the other side. Assume good intentions.\n2. Be Patient: Maintainers are often volunteers with day jobs — responses may take days or weeks.\n3. Be Clear: Write complete, detailed messages. Context that's obvious to you isn't obvious to others.\n4. Be Grateful: Thank maintainers and reviewers for their time.\n\nWriting Great Issue Reports:\n• Use a descriptive title: 'Button click doesn't navigate' not 'It's broken'\n• Describe what you expected vs. what happened\n• Include steps to reproduce the problem\n• Add screenshots, error messages, or logs\n• Mention your environment (OS, browser, version)\n\nWriting Great PR Descriptions:\n• Summarize what you changed and why\n• Link to related issues\n• Include before/after screenshots for UI changes\n• Explain any non-obvious implementation decisions\n\nAsynchronous Communication Etiquette:\n• Don't expect immediate responses\n• Avoid @mentioning people unless necessary\n• Keep discussions in public channels — it helps others learn\n• Update your issue/PR if you figure something out\n\nCommunication Channels:\n• GitHub Issues & PRs: Technical discussions about the project\n• Discord/Slack: Casual chat, quick questions, community bonding (Join OSK's Discord!)\n• Mailing Lists: Formal announcements and longer-form discussions"
           },
           {
             "id": "code-review",
             "title": "Code Review Process",
             "type": "hands-on",
             "duration": "30 min",
-            "content": "Understanding and participating in code review processes"
+            "content": "Code review is a collaborative process where maintainers and other contributors examine your changes before merging. It's not just about catching bugs — it's a learning opportunity for everyone!\n\nWhat Reviewers Look For:\n• Correctness: Does the code do what it's supposed to do?\n• Style: Does it follow the project's coding conventions?\n• Tests: Are there tests for new functionality or bug fixes?\n• Documentation: Is new code documented appropriately?\n• Performance: Could this introduce performance issues?\n\nReceiving Feedback Gracefully:\n• Don't take criticism personally — reviewers are critiquing the code, not you.\n• Ask clarifying questions if you don't understand feedback.\n• Thank reviewers for taking time to help you improve.\n• Make requested changes promptly or explain why you disagree.\n\nResponding to Review Comments:\n✓ 'Good point! I've made that change in the latest commit.'\n✓ 'Thanks for the suggestion. Would [alternative approach] also work?'\n✓ 'I wasn't aware of that convention — I've updated it now.'\n\n✗ 'That's a dumb suggestion.'\n✗ 'It works fine, why change it?'\n✗ [Ignoring comments entirely]\n\nWhen You Disagree:\n• It's okay to push back respectfully if you have a good reason.\n• Explain your reasoning with technical justification.\n• Be open to compromise or alternate solutions.\n• Accept the maintainer's final decision gracefully.\n\nPro Tip: As you gain experience, start reviewing others' PRs! It's a great way to learn and contribute without writing code."
           },
           {
             "id": "community-guidelines",
             "title": "Community Guidelines",
             "type": "theory",
             "duration": "15 min",
-            "content": "Understanding codes of conduct and community standards"
+            "content": "Every healthy open source community has guidelines that ensure a welcoming, productive environment for everyone. Understanding and following these is essential.\n\nCodes of Conduct:\nMost projects have a CODE_OF_CONDUCT.md that outlines expected behavior. Common principles:\n• Treat everyone with respect and kindness.\n• No harassment, discrimination, or personal attacks.\n• Constructive criticism only — focus on the work, not the person.\n• Respect different viewpoints and experiences.\n\nContributing Guidelines:\nCONTRIBUTING.md explains how to contribute to a specific project:\n• How to set up the development environment\n• Code style and formatting requirements\n• How to submit issues and pull requests\n• Testing requirements\n• Commit message conventions\n\n⚠️ Always read CONTRIBUTING.md before your first PR!\n\nBeing a Good Community Member:\n• Help newcomers — remember when you were starting out\n• Share knowledge and resources\n• Celebrate others' contributions\n• Report violations of the Code of Conduct to maintainers\n• Participate in discussions constructively\n\nBuilding Your Reputation:\n• Consistency matters: Regular small contributions build trust\n• Quality over quantity: One well-crafted PR beats ten sloppy ones\n• Be reliable: Finish what you start, or communicate if you can't\n• Give back: Review PRs, answer questions, update docs\n\nJoin Open Source Kashmir!\nOur community is here to support your journey:\n• Discord: Join our Discord server for help and community\n• GitHub: github.com/Open-Source-Kashmir\n• Events: Watch for workshops and mentorship opportunities\n\nWelcome to the community! 🎉"
           }
         ],
         "challenges": [
@@ -172,7 +172,9 @@
     "difficulty": "Intermediate",
     "color": "blue",
     "icon": "🚀",
-    "prerequisites": ["beginner"],
+    "prerequisites": [
+      "beginner"
+    ],
     "modules": [
       {
         "id": "advanced-git",
@@ -337,7 +339,9 @@
     "difficulty": "Advanced",
     "color": "red",
     "icon": "🌟",
-    "prerequisites": ["intermediate"],
+    "prerequisites": [
+      "intermediate"
+    ],
     "modules": [
       {
         "id": "project-leadership",

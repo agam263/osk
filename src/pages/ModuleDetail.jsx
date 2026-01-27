@@ -18,7 +18,7 @@ const ModuleDetail = () => {
       navigate('/learning');
       return;
     }
-    
+
     // Calculate progress based on completed lessons
     const progress = Math.round((completedLessons.length / module.lessons.length) * 100);
     setModuleProgress(progress);
@@ -101,7 +101,7 @@ const ModuleDetail = () => {
               <span>{module.duration}</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
-              <div 
+              <div
                 className="bg-blue-600 h-3 rounded-full transition-all duration-500"
                 style={{ width: `${moduleProgress}%` }}
               ></div>
@@ -135,11 +135,10 @@ const ModuleDetail = () => {
                   </div>
                   <button
                     onClick={() => markLessonComplete(module.lessons[currentLesson]?.id)}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                      isLessonCompleted(module.lessons[currentLesson]?.id)
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${isLessonCompleted(module.lessons[currentLesson]?.id)
                         ? 'bg-green-100 text-green-800 border border-green-300'
                         : 'bg-blue-600 text-white hover:bg-blue-700'
-                    }`}
+                      }`}
                     disabled={isLessonCompleted(module.lessons[currentLesson]?.id)}
                   >
                     {isLessonCompleted(module.lessons[currentLesson]?.id) ? (
@@ -157,11 +156,14 @@ const ModuleDetail = () => {
                 </div>
 
                 <div className="prose max-w-none">
-                  <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Lesson Content</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                  <div className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-8 mb-6 border border-gray-200 dark:border-gray-700">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+                      <BookOpen className="w-5 h-5 text-blue-600" />
+                      Lesson Content
+                    </h3>
+                    <div className="text-gray-800 dark:text-gray-200 leading-loose text-base font-medium whitespace-pre-line">
                       {module.lessons[currentLesson]?.content}
-                    </p>
+                    </div>
                   </div>
 
                   {/* Lesson Navigation */}
@@ -169,11 +171,10 @@ const ModuleDetail = () => {
                     <button
                       onClick={() => setCurrentLesson(Math.max(0, currentLesson - 1))}
                       disabled={currentLesson === 0}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                        currentLesson === 0
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${currentLesson === 0
                           ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                           : 'bg-gray-600 text-white hover:bg-gray-700'
-                      }`}
+                        }`}
                     >
                       ← Previous
                     </button>
@@ -183,11 +184,10 @@ const ModuleDetail = () => {
                     <button
                       onClick={() => setCurrentLesson(Math.min(module.lessons.length - 1, currentLesson + 1))}
                       disabled={currentLesson === module.lessons.length - 1}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                        currentLesson === module.lessons.length - 1
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${currentLesson === module.lessons.length - 1
                           ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                           : 'bg-blue-600 text-white hover:bg-blue-700'
-                      }`}
+                        }`}
                     >
                       Next →
                     </button>
@@ -196,36 +196,7 @@ const ModuleDetail = () => {
               </div>
             )}
 
-            {/* Challenges */}
-            {module.challenges.length > 0 && (
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Award className="w-6 h-6 mr-2 text-yellow-600" />
-                  Challenges ({module.challenges.length})
-                </h3>
-                <div className="space-y-4">
-                  {module.challenges.map((challenge, index) => (
-                    <div key={index} className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h4 className="text-lg font-semibold text-yellow-800 mb-2">
-                            {challenge.title}
-                          </h4>
-                          <p className="text-yellow-700 mb-3">{challenge.description}</p>
-                          <div className="flex items-center text-sm text-yellow-600">
-                            <Award className="w-4 h-4 mr-1" />
-                            <span>{challenge.points} points</span>
-                          </div>
-                        </div>
-                        <button className="ml-4 px-4 py-2 bg-yellow-200 text-yellow-800 rounded-lg font-medium hover:bg-yellow-300 transition-colors">
-                          Start Challenge
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+
           </div>
 
           {/* Sidebar */}
@@ -257,13 +228,12 @@ const ModuleDetail = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentLesson(index)}
-                    className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${
-                      currentLesson === index
+                    className={`w-full text-left p-3 rounded-lg transition-all duration-300 ${currentLesson === index
                         ? 'bg-blue-100 border-2 border-blue-300'
                         : isLessonCompleted(lesson.id)
-                        ? 'bg-green-50 border border-green-200'
-                        : 'bg-gray-50 border border-gray-200 hover:bg-gray-100'
-                    }`}
+                          ? 'bg-green-50 border border-green-200'
+                          : 'bg-gray-50 border border-gray-200 hover:bg-gray-100'
+                      }`}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
@@ -291,7 +261,7 @@ const ModuleDetail = () => {
                   <span className="font-medium">{completedLessons.length}/{module.lessons.length}</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
+                  <div
                     className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                     style={{ width: `${moduleProgress}%` }}
                   ></div>
